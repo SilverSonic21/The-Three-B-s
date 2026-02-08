@@ -1,55 +1,45 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class Movement : MonoBehaviour
+
+public class Player : MonoBehaviour
 {
+    public float speed = 5f;
+    private float move;
 
-    public float speed = 100f;
-    public float JumpHeight;
-    public bool InAir = false;
+    [SerializeField] public float jumpForce = 16f;
+    private Rigidbody2D rigidBody;
 
-    private Rigidbody2D rb2d;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+    
+    private bool isGrounded;
 
-    void Start()
+    private void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    void Update()
     {
-        InAir = false;
-        Debug.Log("InAir false");
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        InAir = true;
-        Debug.Log("InAir True");
+       isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundLayer);
+        move = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            Jump();
+        }
     }
 
     void FixedUpdate()
     {
-        Vector2 NoMovement = new Vector2(0f, 0f);
-
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        if (moveHorizontal > 0)
-        {
-            {
-                rb2d.linearVelocity = new Vector2(speed, rb2d.linearVelocity.y);
-
-            }
-        }
-        if (moveHorizontal < 0)
-        {
-            rb2d.linearVelocity = new Vector2(-speed, rb2d.linearVelocity.y);
-        }
-        if (Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.UpArrow)))
-        {
-            if (InAir == false)
-            {
-                rb2d.AddForce(new Vector2(0, JumpHeight), ForceMode2D.Impulse);
-            }
-        }
+        
+        rigidBody.linearVelocity = new Vector2(move * speed, rigidBody.linearVelocity.y);
     }
 
+    private void Jump()
+    {
+        rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    }
 }
-
