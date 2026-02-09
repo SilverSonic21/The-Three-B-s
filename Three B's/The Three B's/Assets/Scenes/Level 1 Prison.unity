@@ -384,18 +384,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2c84b5d3337af42b3680928dc31262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
+
   speed: 5
   jumpForce: 5
   groundCheck: {fileID: 788253137}
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-=======
+
   speed: 8
   JumpHeight: 0
   InAir: 0
->>>>>>> origin/main
+ origin/main
 --- !u!1 &788253136
 GameObject:
   m_ObjectHideFlags: 0
