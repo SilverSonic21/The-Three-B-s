@@ -119,7 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &434685394
+=======
+--- !u!1 &68593781
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,15 +131,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 434685396}
   - component: {fileID: 434685395}
   m_Layer: 0
   m_Name: Circle
+=======
+  - component: {fileID: 68593782}
+  m_Layer: 0
+  m_Name: Bottle m
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!212 &434685395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -192,11 +203,15 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &434685396
+=======
+--- !u!4 &68593782
+>>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 434685394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -205,6 +220,16 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+=======
+  m_GameObject: {fileID: 68593781}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.02, y: 0.19, z: -0.016755044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 907859595}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475094634
 GameObject:
@@ -391,11 +416,18 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+<<<<<<< Updated upstream
 =======
   speed: 8
   JumpHeight: 0
   InAir: 0
 >>>>>>> origin/main
+=======
+  groundRadius: 0.2
+  bulletPrefab: {fileID: 6975940556573349697, guid: 3060b6866e7e9b142aec8ecb8031b3d1, type: 3}
+  firingPoint: {fileID: 68593782}
+  fireRate: 1
+>>>>>>> Stashed changes
 --- !u!1 &788253136
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +459,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 551686068}
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0.206}
+--- !u!1 &907859594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907859595}
+  m_Layer: 0
+  m_Name: Bottle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &907859595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907859594}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.74, y: -0.22, z: 0.041191466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 68593782}
+  m_Father: {fileID: 551686068}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1828914279
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +683,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3075112229741204885, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
       insertIndex: -1
       addedObject: {fileID: 788253137}
+    - targetCorrespondingSourceObject: {fileID: 3075112229741204885, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 907859595}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5010454547495540487, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
       insertIndex: -1
