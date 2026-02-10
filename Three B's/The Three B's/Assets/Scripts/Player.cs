@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 16f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private float groundRadius = 0.2f;
+   
     private bool isGrounded;
 
     [Header("Shooting")]
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform firingPoint;
     [Range(0.1f, 1f)]
     [SerializeField] private float fireRate = 0.5f;
-    //[SerializeField] private float bulletSpeed = 10f;
+    [SerializeField] private float bulletSpeed = 10f;
     private float nextFire = 0f;
 
     private bool isFacingRight = true;
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         move = Input.GetAxisRaw("Horizontal");
 
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundLayer);
 
 
 

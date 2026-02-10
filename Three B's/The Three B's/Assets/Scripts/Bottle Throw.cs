@@ -1,4 +1,3 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BottleThrow : MonoBehaviour
@@ -26,7 +25,7 @@ public class BottleThrow : MonoBehaviour
     public void SetDirection(float dir)
     {
         direction = dir;
-        rb.linearVelocity = new Vector2(direction * speed, 0f);
+        //rb.linearVelocity = new Vector2(direction * speed, 0f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
