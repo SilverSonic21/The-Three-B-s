@@ -13,7 +13,8 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // Destroy this enemy after 30 seconds
+        player = GameObject.FindWithTag("Player").transform;
+        //player = GameObject.Ta;
         Destroy(gameObject, 30f);
     }
 

@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public Sprite Idle;
     public Sprite Run;
     public Sprite Jumps;
-    public Sprite Throw;
+    public Sprite Throws;
 
     private bool isFacingRight = true;
     private SpriteRenderer sr;
@@ -54,6 +54,11 @@ public class Player : MonoBehaviour
             nextFire = Time.time + fireRate;
         }
 
+        if (Input.GetMouseButtonUp(0))
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = Idle;
+        }
+
         // Flip
         if (move > 0 && !isFacingRight)
             Flip();
@@ -71,6 +76,7 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        gameObject.GetComponent<SpriteRenderer>().sprite = Jumps;
     }
 
     private void Flip()
@@ -81,7 +87,7 @@ public class Player : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
 
-        // Flip firing point
+        
         Vector3 firePos = firingPoint.localPosition;
         firePos.x *= -1;
         firingPoint.localPosition = firePos;
@@ -91,8 +97,9 @@ public class Player : MonoBehaviour
     {
         GameObject bottle = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         BottleThrow bt = bottle.GetComponent<BottleThrow>();
+        
+        gameObject.GetComponent<SpriteRenderer>().sprite = Throws;
 
-        sr.sprite = Throw;
 
         if (isFacingRight)
             bt.SetDirection(1f);
