@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 16f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-   
     private bool isGrounded;
 
     [Header("Shooting")]
@@ -20,55 +19,48 @@ public class Player : MonoBehaviour
     [SerializeField] private float fireRate = 0.5f;
     private float nextFire = 0f;
 
-    [Header("Players Movements")]
+    [Header("Player Sprites")]
     public Sprite Idle;
     public Sprite Run;
     public Sprite Jumps;
     public Sprite Throw;
 
     private bool isFacingRight = true;
+    private SpriteRenderer sr;
 
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         move = Input.GetAxisRaw("Horizontal");
 
+        // Ground Check
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundLayer);
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = Run;
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = Run;
-        }
-
+        // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-         {
+        {
             Jump();
-         }
+        }
+
+        // Shoot
         if (Input.GetMouseButtonDown(0) && Time.time >= nextFire)
         {
             Shoot();
             nextFire = Time.time + fireRate;
         }
-       
-       if (Input.GetMouseButtonUp(0))
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = Idle;
-        }
 
-        if (move < 0 && !isFacingRight)
+        // Flip
+        if (move > 0 && !isFacingRight)
             Flip();
-        else if (move > 0 && isFacingRight)
+        else if (move < 0 && isFacingRight)
             Flip();
+
+        HandleAnimations();
     }
 
     void FixedUpdate()
@@ -79,19 +71,17 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        gameObject.GetComponent<SpriteRenderer>().sprite = Jumps;
     }
 
     private void Flip()
     {
         isFacingRight = !isFacingRight;
 
-
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
 
-
+        // Flip firing point
         Vector3 firePos = firingPoint.localPosition;
         firePos.x *= -1;
         firingPoint.localPosition = firePos;
@@ -99,15 +89,31 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bottle = Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
+        GameObject bottle = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         BottleThrow bt = bottle.GetComponent<BottleThrow>();
-        gameObject.GetComponent<SpriteRenderer>().sprite = Throw;
+
+        sr.sprite = Throw;
 
         if (isFacingRight)
-            bt.SetDirection(-1f);
-        else
             bt.SetDirection(1f);
-        
-        
+        else
+            bt.SetDirection(-1f);
+    }
+
+    private void HandleAnimations()
+    {
+        if (!isGrounded)
+        {
+            sr.sprite = Jumps;
+        }
+        else if (move != 0)
+        {
+            sr.sprite = Run;
+        }
+        else
+        {
+            sr.sprite = Idle;
+        }
     }
 }
+
