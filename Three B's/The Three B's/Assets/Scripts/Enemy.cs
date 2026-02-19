@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isFacingRight = true;
+    public GameObject objectToDestroy;
 
     void Start()
     {
@@ -16,6 +17,19 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
         //player = GameObject.Ta;
         Destroy(gameObject, 30f);
+        Invoke("FunctionToDestroy", 30f);
+        StartCoroutine(DestroyCoroutine());
+    }
+
+    void FunctionToDestroy()
+    {
+        Destroy(objectToDestroy);
+    }
+
+    IEnumerator DestroyCoroutine()
+    {
+        yield return new WaitForSeconds(30f);
+        Destroy(objectToDestroy);
     }
 
     void FixedUpdate()
