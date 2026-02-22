@@ -8,38 +8,26 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isFacingRight = true;
-    public GameObject objectToDestroy;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
         player = GameObject.FindWithTag("Player").transform;
-        //player = GameObject.Ta;
         Destroy(gameObject, 30f);
-        Invoke("FunctionToDestroy", 30f);
-        StartCoroutine(DestroyCoroutine());
+       
     }
 
-    void FunctionToDestroy()
-    {
-        Destroy(objectToDestroy);
-    }
-
-    IEnumerator DestroyCoroutine()
-    {
-        yield return new WaitForSeconds(30f);
-        Destroy(objectToDestroy);
-    }
 
     void FixedUpdate()
     {
         if (player == null) return;
 
-        Vector2 direction = (player.position - transform.position).normalized;
-        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+          float moveX = Mathf.Sign(player.position.x - transform.position.x);
 
-        HandleFlip(direction.x);
+        rb.linearVelocity = new Vector2(moveX * speed, rb.linearVelocity.y);
+
+        HandleFlip(moveX);
 
         if (transform.position.y < -20)
         {
