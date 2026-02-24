@@ -1,18 +1,21 @@
 using UnityEngine;
 
-public class LosingHearts : MonoBehaviour
+public class Health : MonoBehaviour
 {
     public GameObject heart1, heart2, heart3;
-    
+    public Endgame endgame;
     
     void Start()
     {
         heart1.SetActive(true);
         heart2.SetActive(true);
         heart3.SetActive(true);
+
     }
 
-    public void Hearts(int hitCount) 
+    
+
+    public void HealthDamage(int hitCount) 
     {
 
         switch (hitCount)
