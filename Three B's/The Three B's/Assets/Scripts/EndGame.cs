@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Endgame : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class Endgame : MonoBehaviour
                 health.HealthDamage(hitCount);
                 Debug.Log(health);
 
-            Debug.Log("Hit #" + hitCount);
+            //Debug.Log("Hit #" + hitCount);
 
             if (hitCount >= maxHits)
             {
@@ -49,10 +50,9 @@ public class Endgame : MonoBehaviour
 
     void Lose()
     {
-        Debug.Log("Game Over!");
+        //Debug.Log("Game Over!");
 
-        //if (winScreen != null)
-           // winScreen.DisplayLoseResults();
+      SceneManager.LoadScene("Lose");
     }
 
     public void Win()
