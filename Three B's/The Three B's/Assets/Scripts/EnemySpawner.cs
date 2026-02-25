@@ -2,17 +2,15 @@ using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 
-
-public class EnemySpaawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
-[System.Serializable]
+    [System.Serializable]
     public class SpawnableEnemy
     {
         public string name;
         public GameObject enemyPrefab;
         public int count;
         public float interval;
-
         public int pointValue;
     }
 
@@ -26,14 +24,23 @@ public class EnemySpaawner : MonoBehaviour
     public List<Wave> waves = new List<Wave>();
 
     [Header("Random Spawn Area")]
-    public Transform spawnPointA;  // Bottom-left corner of spawn area
-    public Transform spawnPointB;  // Top-right corner of spawn area
+    public Transform spawnPointA;
+    public Transform spawnPointB;
 
     public float timeBetweenWaves = 5f;
+
+    [Header("Win Condition")]
+    public GameObject winScreen; // Assign in inspector
+
     private int currentWaveIndex = 0;
+    private int enemiesAlive = 0;
+    private bool allWavesSpawned = false;
 
     void Start()
     {
+        if (winScreen != null)
+            winScreen.SetActive(false);
+
         StartCoroutine(RunWaves());
     }
 
@@ -50,7 +57,8 @@ public class EnemySpaawner : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenWaves);
         }
 
-        Debug.Log("All waves completed!");
+        // All waves finished spawning
+        allWavesSpawned = true;
     }
 
     IEnumerator SpawnWaveRandomized(Wave wave)
@@ -78,8 +86,32 @@ public class EnemySpaawner : MonoBehaviour
     {
         Vector3 spawnPos = GetRandomSpawnPosition();
         GameObject spawnedEnemy = Instantiate(enemyData.enemyPrefab, spawnPos, Quaternion.identity);
-        //PointsOnDeath pod = spawnedEnemy.AddComponent<PointsOnDeath>();
-        //pod.points = enemyData.pointValue;
+
+        enemiesAlive++;
+
+        // Attach death tracker
+        EnemyDeathTracker tracker = spawnedEnemy.AddComponent<EnemyDeathTracker>();
+        tracker.spawner = this;
+    }
+
+    public void EnemyDied()
+    {
+        enemiesAlive--;
+
+        if (allWavesSpawned && enemiesAlive <= 0)
+        {
+            WinGame();
+        }
+    }
+
+    void WinGame()
+    {
+        //Debug.Log("YOU WIN!");
+
+        if (winScreen != null)
+            winScreen.SetActive(true);
+
+        Time.timeScale = 0f; // Freeze game
     }
 
     Vector3 GetRandomSpawnPosition()

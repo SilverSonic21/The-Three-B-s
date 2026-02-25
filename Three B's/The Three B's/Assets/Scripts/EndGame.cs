@@ -5,7 +5,7 @@ public class Endgame : MonoBehaviour
 {
     public TakingDamage takingdamage;
     public Health health;
-    //public WinScreen winScreen;
+    public GameObject loseScreen;
 
     [Header("Settings")]
     public int maxHits = 3;
@@ -14,6 +14,12 @@ public class Endgame : MonoBehaviour
 
     void Start()
     {
+
+        if (loseScreen != null)
+        {
+            loseScreen.SetActive(false);
+        }
+        
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         health = player.GetComponent<Health>();
 
@@ -50,9 +56,12 @@ public class Endgame : MonoBehaviour
 
     void Lose()
     {
-        //Debug.Log("Game Over!");
+        Debug.Log("YOU WIN!");
 
-      SceneManager.LoadScene("Lose");
+        if (loseScreen != null)
+            loseScreen.SetActive(true);
+
+        Time.timeScale = 0f; // Freeze game
     }
 
     public void Win()

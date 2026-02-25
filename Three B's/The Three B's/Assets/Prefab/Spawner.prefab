@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6358962234203724841}
-  - component: {fileID: 4034412942418707244}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -65,29 +64,6 @@ Transform:
   - {fileID: 8760649039730976631}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4034412942418707244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763657105592786702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e621038e3858ab409155606a7c16b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySpaawner
-  waves:
-  - waveName: Cops
-    enemiesInWave:
-    - name: 
-      enemyPrefab: {fileID: 992332797280327745, guid: 83d0c501e04072940a5dbec78178c8bf, type: 3}
-      count: 5
-      interval: 2
-      pointValue: 0
-  spawnPointA: {fileID: 1884795804826489286}
-  spawnPointB: {fileID: 8760649039730976631}
-  timeBetweenWaves: 5
 --- !u!1 &8814901738990039586
 GameObject:
   m_ObjectHideFlags: 0

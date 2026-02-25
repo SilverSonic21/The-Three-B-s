@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
         GameObject bottle = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         BottleThrow bt = bottle.GetComponent<BottleThrow>();
         
-        gameObject.GetComponent<SpriteRenderer>().sprite = Throws;
+        
 
 
         if (isFacingRight)

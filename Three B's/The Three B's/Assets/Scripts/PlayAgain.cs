@@ -1,23 +1,13 @@
 using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
-using UnityEngine.SceneManagement;
-public class PlayAgain : MonoBehaviour
+using UnityEngine.SceneManagement; // Required for scene loading
+
+public class GameUIHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void RestartGame()
     {
+        Time.timeScale = 1f; // IMPORTANT: Unfreezes the game
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void LoadGame()
-    {
-        SceneManager.LoadScene("Level1");
+        // Reloads the currently active scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
