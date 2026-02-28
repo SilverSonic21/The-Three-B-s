@@ -5,6 +5,7 @@ public class BottleThrow : MonoBehaviour
 public float speed = 5f;
     public float life = 1f;
     public GameObject particles;
+    public GameObject particles2;
     private float direction = 1f;
     private Rigidbody2D rb;
     public float rotationSpeed = 500f;
@@ -41,8 +42,9 @@ public float speed = 5f;
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
-            GameObject particle = Instantiate(particles, transform.position, Quaternion.identity); 
+            GameObject particle = Instantiate(particles, transform.position, Quaternion.identity);  
             particle.GetComponent<ParticleSystem>().Play();  
+            
             Destroy(gameObject);
         } 
         

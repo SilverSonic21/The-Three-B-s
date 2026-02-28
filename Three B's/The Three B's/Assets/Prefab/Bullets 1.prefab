@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100791233458372398}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7069239, w: 0.70728964}
+  m_LocalRotation: {x: 0, y: 0, z: -0.70692164, w: 0.7072919}
   m_LocalPosition: {x: -9.8415, y: -2.7302, z: 0}
   m_LocalScale: {x: 0.49374202, y: 0.3609116, z: 1}
   m_ConstrainProportionsScale: 0
@@ -109,6 +109,8 @@ MonoBehaviour:
   speed: 10
   life: 2
   particles: {fileID: 5238089108126480775, guid: a9ad954ba44914b48839e5f2056f18d2, type: 3}
+  particles2: {fileID: 5682892118155316393, guid: b4c8090caadfd3d4d8dc9d222fa71ef4, type: 3}
+  rotationSpeed: 500
 --- !u!50 &5401900851842057286
 Rigidbody2D:
   serializedVersion: 5

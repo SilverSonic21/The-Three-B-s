@@ -107,9 +107,12 @@ GameObject:
   - component: {fileID: 8528602707300936814}
   - component: {fileID: 5991057335308073142}
   - component: {fileID: 2814296393368343355}
+  - component: {fileID: 6255948270259033261}
+  - component: {fileID: 4227853983813108063}
+  - component: {fileID: 671884181584255393}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +217,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 1
-  m_SleepingMode: 0
+  m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &5991057335308073142
@@ -267,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  jumpForce: 12
+  jumpForce: 10
   groundCheck: {fileID: 6190444109265685075}
   groundLayer:
     serializedVersion: 2
@@ -278,4 +281,52 @@ MonoBehaviour:
   Idle: {fileID: 7702055740140898530, guid: 7cb553c33420ed84ab3fc46fde0312da, type: 3}
   Run: {fileID: -5987654598459675962, guid: 2a0e49c4ad6e34c46bd45d73a6223491, type: 3}
   Jumps: {fileID: 6375827052108896946, guid: 85f3768bb18789a4c89daf496e8be6b2, type: 3}
-  Throws: {fileID: 0}
+  Throws: {fileID: 5468231861817339002, guid: 2ffef920384ade34181b98a86812e578, type: 3}
+--- !u!114 &6255948270259033261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010454547495540487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e2db5e2dc7f4247a813aa2ec01f01d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TakingDamage
+  flashDuration: 0.4
+  flashCount: 3
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  endgame: {fileID: 0}
+--- !u!114 &4227853983813108063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010454547495540487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6abc215ac15505046a846dc0cff2cf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Endgame
+  takingdamage: {fileID: 0}
+  health: {fileID: 0}
+  loseScreen: {fileID: 0}
+  maxHits: 3
+--- !u!114 &671884181584255393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010454547495540487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b570d6aac7022dd4c83aaddbf531cdbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LosingHearts
+  heart1: {fileID: 0}
+  heart2: {fileID: 0}
+  heart3: {fileID: 0}
+  endgame: {fileID: 0}
