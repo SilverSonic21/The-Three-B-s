@@ -510,7 +510,7 @@ MonoBehaviour:
     enemiesInWave:
     - name: 
       enemyPrefab: {fileID: 992332797280327745, guid: 83d0c501e04072940a5dbec78178c8bf, type: 3}
-      count: 0
+      count: 10
       interval: 1
       pointValue: 0
   spawnPointA: {fileID: 273506925}
@@ -1293,8 +1293,8 @@ Transform:
   m_GameObject: {fileID: 337474711}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.25208, y: 1.9164915, z: -2}
-  m_LocalScale: {x: 2.508826, y: 2.8489206, z: 1}
+  m_LocalPosition: {x: 26.2864, y: 2.1227, z: -2}
+  m_LocalScale: {x: 2.5155997, y: 2.9497724, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 577644399}
@@ -1557,7 +1557,7 @@ Transform:
   m_GameObject: {fileID: 475094634}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.68, y: 0.76, z: -10}
+  m_LocalPosition: {x: 20.47, y: 0.76, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4467,7 +4467,7 @@ Transform:
   m_GameObject: {fileID: 1341655568}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.7, y: -1.74, z: 0}
+  m_LocalPosition: {x: -83.63, y: -1.74, z: 0}
   m_LocalScale: {x: 2.3478, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8010,6 +8010,10 @@ PrefabInstance:
     - target: {fileID: 6358962234203724841, guid: eab69f1936b388a43a765bcdfaea887a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760649039730976631, guid: eab69f1936b388a43a765bcdfaea887a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.47
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4034412942418707244, guid: eab69f1936b388a43a765bcdfaea887a, type: 3}
