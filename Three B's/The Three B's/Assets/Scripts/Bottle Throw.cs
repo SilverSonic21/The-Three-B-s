@@ -42,8 +42,10 @@ public float speed = 5f;
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
-            GameObject particle = Instantiate(particles, transform.position, Quaternion.identity);  
-            particle.GetComponent<ParticleSystem>().Play();  
+            Instantiate(particles, transform.position, Quaternion.identity);  
+            Instantiate(particles2, transform.position, Quaternion.identity);
+            particles.GetComponent<ParticleSystem>().Play();  
+            particles2.GetComponent<ParticleSystem>().Play();
             
             Destroy(gameObject);
         } 

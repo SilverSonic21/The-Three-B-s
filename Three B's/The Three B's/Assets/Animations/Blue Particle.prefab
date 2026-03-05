@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 683069926808593272}
   - component: {fileID: 5630857335857438832}
   m_Layer: 0
-  m_Name: Particle System 1
+  m_Name: Blue Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9056604, g: 0.12388753, b: 0.12388753, a: 1}
+      maxColor: {r: 0.17721373, g: 0.12549017, b: 0.90588236, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

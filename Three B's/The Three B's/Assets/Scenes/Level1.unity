@@ -513,6 +513,7 @@ MonoBehaviour:
       count: 5
       interval: 1
       pointValue: 0
+      minDistance: 5
   - waveName: 
     enemiesInWave:
     - name: 
@@ -520,6 +521,7 @@ MonoBehaviour:
       count: 15
       interval: 1
       pointValue: 0
+      minDistance: 5
   - waveName: 
     enemiesInWave:
     - name: 
@@ -527,6 +529,7 @@ MonoBehaviour:
       count: 20
       interval: 1
       pointValue: 0
+      minDistance: 5
   spawnPointA: {fileID: 273506925}
   spawnPointB: {fileID: 1071401873}
   timeBetweenWaves: 8
@@ -3992,8 +3995,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: -200, y: -600}
+  m_AnchoredPosition: {x: 0, y: -230.0784}
+  m_SizeDelta: {x: -200, y: -539.8432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295788313
 MonoBehaviour:
@@ -6968,7 +6971,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0075035, y: -1.5841}
-  m_SizeDelta: {x: 900.98, y: 103.6303}
+  m_SizeDelta: {x: 900.98, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886660037
 MonoBehaviour:
