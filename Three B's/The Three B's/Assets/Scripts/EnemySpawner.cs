@@ -114,7 +114,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (allWavesSpawned && enemiesAlive <= 0)
         {
-            WinGame();
+            //WinGame();
         }
     }
 
