@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
     public float speed = 5f;
     private float move;
     private Rigidbody2D rigidBody;
+     private Animator anim; 
 
     [Header("Jump")]
     [SerializeField] private float jumpForce = 16f;
@@ -32,11 +33,14 @@ public class Player : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
         move = Input.GetAxisRaw("Horizontal");
+
+        anim.SetFloat("Movement", move);
 
         // Ground Check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -48,16 +52,19 @@ public class Player : MonoBehaviour
         }
 
         // Shoot
-        if (Input.GetMouseButtonDown(0) && Time.time >= nextFire)
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
             nextFire = Time.time + fireRate;
+            anim.SetBool("Throw", true);
+            Debug.Log("Throw = True");
+            
         }
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = Idle;
-        }
+        //if (Input.GetMouseButtonUp(0))
+       // {
+        //    gameObject.GetComponent<SpriteRenderer>().sprite = Idle;
+       // }
 
         // Flip
         if (move > 0 && !isFacingRight)
@@ -65,7 +72,7 @@ public class Player : MonoBehaviour
         else if (move < 0 && isFacingRight)
             Flip();
 
-        HandleAnimations();
+        //HandleAnimations();
     }
 
     void FixedUpdate()
@@ -81,30 +88,26 @@ public class Player : MonoBehaviour
 
     private void Flip()
     {
-        isFacingRight = !isFacingRight;
-
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
-
-        
-        Vector3 firePos = firingPoint.localPosition;
-        firePos.x *= -1;
-        firingPoint.localPosition = firePos;
+        if (move > 0 ) 
+            sr.flipX = false;
+        else if (move < 0)
+            sr.flipX = true;
     }
 
     private void Shoot()
     {
+        
         GameObject bottle = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         BottleThrow bt = bottle.GetComponent<BottleThrow>();
         
-        
-
-
+        //anim.SetBool("Throw", true);
+        anim.SetBool("Throw", false);
         if (isFacingRight)
             bt.SetDirection(1f);
         else
             bt.SetDirection(-1f);
+    
+        
     }
 
     private void HandleAnimations()
