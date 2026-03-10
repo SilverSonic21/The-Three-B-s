@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+   [Header("Movement")]
     public float speed = 5f;
     private float move;
     private Rigidbody2D rigidBody;
@@ -28,6 +29,9 @@ public class Player : MonoBehaviour
 
     private bool isFacingRight = true;
     private SpriteRenderer sr;
+
+    private bool isShooting = false;
+    private float shootTimer = 0f;
 
     private void Start()
     {
@@ -57,7 +61,7 @@ public class Player : MonoBehaviour
         
 
         // Shoot
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.time >= nextFire)
         {
             Shoot();
             nextFire = Time.time + fireRate;
@@ -84,7 +88,7 @@ public class Player : MonoBehaviour
         else if (move < 0 && isFacingRight)
             Flip();
 
-        //HandleAnimations();
+        HandleAnimations();
     }
 
     void FixedUpdate()
@@ -95,7 +99,7 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        gameObject.GetComponent<SpriteRenderer>().sprite = Jumps;
+        sr.sprite = Jumps;
     }
 
     private void Flip()
@@ -106,7 +110,11 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        
+        isShooting = true;
+        shootTimer = 0.2f;
+
+        sr.sprite = Throws;
+
         GameObject bottle = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         BottleThrow bt = bottle.GetComponent<BottleThrow>();
 
@@ -123,6 +131,14 @@ public class Player : MonoBehaviour
 
     private void HandleAnimations()
     {
+        if (isShooting)
+        {
+            shootTimer -= Time.deltaTime;
+            if (shootTimer <= 0)
+                isShooting = false;
+            return;
+        }
+
         if (!isGrounded)
         {
             sr.sprite = Jumps;
