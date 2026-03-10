@@ -7883,6 +7883,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2814296393368343355, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 897865637}
+    - target: {fileID: 2814296393368343355, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
       propertyPath: Throws
       value: 
       objectReference: {fileID: 0}
@@ -7932,7 +7936,7 @@ PrefabInstance:
       objectReference: {fileID: 1948287311}
     - target: {fileID: 4794493367410958185, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5010454547495540487, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
       propertyPath: m_Name
