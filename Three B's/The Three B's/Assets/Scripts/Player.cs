@@ -21,17 +21,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float fireRate = 0.5f;
     private float nextFire = 0f;
 
-    [Header("Player Sprites")]
-    public Sprite Idle;
-    public Sprite Run;
-    public Sprite Jumps;
-    public Sprite Throws;
-
     private bool isFacingRight = true;
     private SpriteRenderer sr;
-
-    private bool isShooting = false;
-    private float shootTimer = 0f;
 
     private void Start()
     {
@@ -52,34 +43,21 @@ public class Player : MonoBehaviour
         {
             Jump();
             
-            anim.SetBool("Jump", true);
         }
-        else{
-            anim.SetBool("Jump", false);
 
-        }
-        
+        anim.SetBool("Jump", !isGrounded);
+        anim.SetBool("isRunning", move != 0);
 
         // Shoot
         if (Input.GetMouseButtonDown(0) && Time.time >= nextFire)
         {
             Shoot();
             nextFire = Time.time + fireRate;
-            anim.SetBool("Throw", true);
+           anim.SetBool("Throw", true);
         }
-        else{
+        else
+        {
             anim.SetBool("Throw", false);
-
-        }
-            
-        
-
-        if (move != 0){
-            anim.SetBool("isRunning", true);
-        }
-        else{
-            anim.SetBool("isRunning", false);
-
         }
 
         // Flip
@@ -88,7 +66,6 @@ public class Player : MonoBehaviour
         else if (move < 0 && isFacingRight)
             Flip();
 
-        HandleAnimations();
     }
 
     void FixedUpdate()
@@ -99,7 +76,7 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        sr.sprite = Jumps;
+       
     }
 
     private void Flip()
@@ -110,11 +87,6 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        isShooting = true;
-        shootTimer = 0.2f;
-
-        sr.sprite = Throws;
-
         GameObject bottle = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         BottleThrow bt = bottle.GetComponent<BottleThrow>();
 
@@ -127,30 +99,6 @@ public class Player : MonoBehaviour
             bt.SetDirection(-1f);
     
         
-    }
-
-    private void HandleAnimations()
-    {
-        if (isShooting)
-        {
-            shootTimer -= Time.deltaTime;
-            if (shootTimer <= 0)
-                isShooting = false;
-            return;
-        }
-
-        if (!isGrounded)
-        {
-            sr.sprite = Jumps;
-        }
-        else if (move != 0)
-        {
-            sr.sprite = Run;
-        }
-        else
-        {
-            sr.sprite = Idle;
-        }
     }
 }
 
