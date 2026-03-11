@@ -1,18 +1,16 @@
 using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
-
-public class EnemySpawner : MonoBehaviour
+public class Spawner2 : MonoBehaviour
 {
-    [System.Serializable]
+  [System.Serializable]
     public class SpawnableEnemy
     {
         public string name;
         public GameObject enemyPrefab;
         public int count;
-        public float interval = 1f;
+        public float interval;
         public int pointValue;
-        public float minDistance = 5f;
     }
 
     [System.Serializable]
@@ -30,22 +28,10 @@ public class EnemySpawner : MonoBehaviour
 
     public float timeBetweenWaves = 5f;
 
-    [Header("Win Condition")]
-    public GameObject winScreen;
-
     private int currentWaveIndex = 0;
-    private int enemiesAlive = 0;
-    private bool allWavesSpawned = false;
-
-    private Transform player;
 
     void Start()
     {
-        if (winScreen != null)
-            winScreen.SetActive(false);
-
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-
         StartCoroutine(RunWaves());
     }
 
@@ -54,17 +40,13 @@ public class EnemySpawner : MonoBehaviour
         while (currentWaveIndex < waves.Count)
         {
             Wave currentWave = waves[currentWaveIndex];
-
-            Debug.Log("Starting Wave " + (currentWaveIndex + 1) + ": " + currentWave.waveName);
+            Debug.Log($"Starting Wave {currentWaveIndex + 1}: {currentWave.waveName}");
 
             yield return StartCoroutine(SpawnWaveRandomized(currentWave));
 
             currentWaveIndex++;
-
             yield return new WaitForSeconds(timeBetweenWaves);
         }
-
-        allWavesSpawned = true;
     }
 
     IEnumerator SpawnWaveRandomized(Wave wave)
@@ -91,41 +73,7 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy(SpawnableEnemy enemyData)
     {
         Vector3 spawnPos = GetRandomSpawnPosition();
-
-        int attempts = 0;
-
-        while (Vector2.Distance(player.position, spawnPos) < enemyData.minDistance && attempts < 20)
-        {
-            spawnPos = GetRandomSpawnPosition();
-            attempts++;
-        }
-
-        GameObject spawnedEnemy = Instantiate(enemyData.enemyPrefab, spawnPos, Quaternion.identity);
-
-        enemiesAlive++;
-
-        EnemyDeathTracker tracker = spawnedEnemy.AddComponent<EnemyDeathTracker>();
-        tracker.spawner = this;
-    }
-
-    public void EnemyDied()
-    {
-        enemiesAlive--;
-
-        if (allWavesSpawned && enemiesAlive <= 0)
-        {
-            WinGame();
-        }
-    }
-
-    void WinGame()
-    {
-        Debug.Log("YOU WIN!");
-
-        if (winScreen != null)
-            winScreen.SetActive(true);
-
-        Time.timeScale = 0f;
+        Instantiate(enemyData.enemyPrefab, spawnPos, Quaternion.identity);
     }
 
     Vector3 GetRandomSpawnPosition()
@@ -148,7 +96,6 @@ public class EnemySpawner : MonoBehaviour
         for (int i = list.Count - 1; i > 0; i--)
         {
             int j = Random.Range(0, i + 1);
-
             T temp = list[i];
             list[i] = list[j];
             list[j] = temp;
