@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
     private bool isFacingRight = true;
     private SpriteRenderer sr;
 
+    private bool isShooting = false;
+    private float shootTimer = 0f;
+
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
