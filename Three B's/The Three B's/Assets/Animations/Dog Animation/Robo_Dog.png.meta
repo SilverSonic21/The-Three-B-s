@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: 93e97fa09c9c7a6468d8d2bde00b1218
+guid: 74a39e63de02cba45b85c022fb549937
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3459889992903969129
-    second: MC_BamaBam_Idle_0
+      213: 7285123661793718640
+    second: Robo_Dog_0
   - first:
-      213: -1889137599476909846
-    second: MC_BamaBam_Idle_1
+      213: -7290548160014471259
+    second: Robo_Dog_1
+  - first:
+      213: -527218653371687439
+    second: Robo_Dog_2
+  - first:
+      213: -4582025528051528865
+    second: Robo_Dog_3
+  - first:
+      213: 2557378355129536106
+    second: Robo_Dog_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,17 +108,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC_BamaBam_Idle_0
+      name: Robo_Dog_0
       rect:
         serializedVersion: 2
-        x: 112
-        y: 54
-        width: 223
-        height: 423
+        x: 126
+        y: 208
+        width: 278
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96948f40e9ff30030800000000000000
-      internalID: 3459889992903969129
+      spriteID: 071f1064f55f91560800000000000000
+      internalID: 7285123661793718640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_BamaBam_Idle_1
+      name: Robo_Dog_1
       rect:
         serializedVersion: 2
-        x: 642
-        y: 74
-        width: 227
-        height: 403
+        x: 611
+        y: 220
+        width: 321
+        height: 141
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +162,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae83853cc5f68c5e0800000000000000
-      internalID: -1889137599476909846
+      spriteID: 5afa5705315c2da90800000000000000
+      internalID: -7290548160014471259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Dog_2
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 215
+        width: 293
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd12d69d61fea8f0800000000000000
+      internalID: -527218653371687439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Dog_3
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 235
+        width: 220
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b87b01f006960c0800000000000000
+      internalID: -4582025528051528865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Dog_4
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 196
+        width: 238
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ec4cd7012ad7320800000000000000
+      internalID: 2557378355129536106
       vertices: []
       indices: 
       edges: []
@@ -160,8 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MC_BamaBam_Idle_0: 3459889992903969129
-      MC_BamaBam_Idle_1: -1889137599476909846
+      Robo_Dog_0: 7285123661793718640
+      Robo_Dog_1: -7290548160014471259
+      Robo_Dog_2: -527218653371687439
+      Robo_Dog_3: -4582025528051528865
+      Robo_Dog_4: 2557378355129536106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

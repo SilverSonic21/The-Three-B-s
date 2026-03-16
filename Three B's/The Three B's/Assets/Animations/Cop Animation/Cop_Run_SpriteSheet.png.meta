@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 7cb553c33420ed84ab3fc46fde0312da
+guid: e29d262f1392c424d900277d7470afd6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7702055740140898530
-    second: Mc_Pose_0
+      213: 2567011603232277007
+    second: Cop_Run_SpriteSheet_0
+  - first:
+      213: 6361408413883601115
+    second: Cop_Run_SpriteSheet_1
+  - first:
+      213: 3889881911197872768
+    second: Cop_Run_SpriteSheet_2
+  - first:
+      213: 4416182183927210907
+    second: Cop_Run_SpriteSheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +105,106 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mc_Pose_0
+      name: Cop_Run_SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 112
-        y: 54
-        width: 224
-        height: 423
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 133
+        y: 84
+        width: 274
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e84b5f63e233ea60800000000000000
-      internalID: 7702055740140898530
+      spriteID: f0247f8d37bdf9320800000000000000
+      internalID: 2567011603232277007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop_Run_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 87
+        width: 232
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd096bc8f33484850800000000000000
+      internalID: 6361408413883601115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop_Run_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 90
+        width: 248
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082ba2f1df2abf530800000000000000
+      internalID: 3889881911197872768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop_Run_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 88
+        width: 246
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93e3606c4e694d30800000000000000
+      internalID: 4416182183927210907
       vertices: []
       indices: 
       edges: []
@@ -125,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 291dd763734653a45a6e30e9e472ebea
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mc_Pose_0: 7702055740140898530
+      Cop_Run_SpriteSheet_0: 2567011603232277007
+      Cop_Run_SpriteSheet_1: 6361408413883601115
+      Cop_Run_SpriteSheet_2: 3889881911197872768
+      Cop_Run_SpriteSheet_3: 4416182183927210907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 538999edc94e9d04f9487d15043cb699
+guid: cd8a6ee29e97aa549b5dbf96be1abe15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2705211460155227376
-    second: MC_Throw_1_0
+      213: 7285123661793718640
+    second: Robo_Dog_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC_Throw_1_0
+      name: Robo_Dog_0
       rect:
         serializedVersion: 2
-        x: 182
-        y: 88
-        width: 240
-        height: 350
+        x: 126
+        y: 208
+        width: 278
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 013c1238288257ad0800000000000000
-      internalID: -2705211460155227376
+      spriteID: 071f1064f55f91560800000000000000
+      internalID: 7285123661793718640
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MC_Throw_1_0: -2705211460155227376
+      Robo_Dog_0: 7285123661793718640
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
