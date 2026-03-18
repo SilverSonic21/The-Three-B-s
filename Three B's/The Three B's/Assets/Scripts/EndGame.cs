@@ -28,8 +28,8 @@ public class Endgame : MonoBehaviour
             takingdamage = player.GetComponent<TakingDamage>();
         }
 
-        takingdamage.endgame = this;
-        health.endgame = this;
+        //takingdamage.endgame = this;
+        //health.endgame = this;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

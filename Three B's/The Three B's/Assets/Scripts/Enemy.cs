@@ -3,12 +3,12 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     public float speed = 5f;
 
     private Rigidbody2D rb;
     private bool isFacingRight = true;
-    private Animator anime; 
+    private Animator anime;
 
     void Start()
     {
@@ -25,10 +25,11 @@ public class Enemy : MonoBehaviour
     {
         if (player == null) return;
 
-            float moveX = Mathf.Sign(player.position.x - transform.position.x);
-            
-            anime.SetBool("Follow", moveX != 0);
+        float moveX = Mathf.Sign(player.position.x - transform.position.x);
+
         rb.linearVelocity = new Vector2(moveX * speed, rb.linearVelocity.y);
+
+        anime.SetBool("Follow", moveX != 0);
 
         HandleFlip(moveX);
 
@@ -36,9 +37,6 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        
-        
     }
 
     
