@@ -10,7 +10,7 @@ public class TakingDamage : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Coroutine flashCoroutine;
     private Color originalColor;
-    public Endgame endgame;
+    //public Endgame endgame;
 
     void Start()
     {

@@ -6541,7 +6541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2814296393368343355, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
       propertyPath: jumpForce
-      value: 11
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3075112229741204885, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6933,6 +6933,34 @@ PrefabInstance:
     - target: {fileID: 6942136312262633564, guid: 48d8fd19dbbed004b815b7de622f1ad7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184506059491331638, guid: 48d8fd19dbbed004b815b7de622f1ad7, type: 3}
+      propertyPath: lines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184506059491331638, guid: 48d8fd19dbbed004b815b7de622f1ad7, type: 3}
+      propertyPath: 'lines.Array.data[0]'
+      value: Ahhh Where am I.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184506059491331638, guid: 48d8fd19dbbed004b815b7de622f1ad7, type: 3}
+      propertyPath: 'lines.Array.data[1]'
+      value: 'Ughh, wait, am I in a cell? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184506059491331638, guid: 48d8fd19dbbed004b815b7de622f1ad7, type: 3}
+      propertyPath: 'lines.Array.data[2]'
+      value: Am I in Jail?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184506059491331638, guid: 48d8fd19dbbed004b815b7de622f1ad7, type: 3}
+      propertyPath: 'lines.Array.data[3]'
+      value: Oh, Hell na!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184506059491331638, guid: 48d8fd19dbbed004b815b7de622f1ad7, type: 3}
+      propertyPath: 'lines.Array.data[4]'
+      value: 'I GOT TO GET OUT OF HERE! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184506059491331638, guid: 48d8fd19dbbed004b815b7de622f1ad7, type: 3}
+      propertyPath: 'lines.Array.data[5]'
+      value: MY BUTT IS TO TIGHT FOR PRISON!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
