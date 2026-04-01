@@ -523,6 +523,19 @@ MonoBehaviour:
   spawnPointA: {fileID: 273506925}
   spawnPointB: {fileID: 1071401873}
   timeBetweenWaves: 5
+--- !u!114 &105123205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105123203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a2a31083158134382f8e2a48f24089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDeathTracker
+  spawner: {fileID: 0}
 --- !u!1 &117358998
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,6 +6515,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7272230022460130775, guid: 5cebf3060839aca449e691ed58fbc87c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6688,6 +6705,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 502366695}
+    - target: {fileID: 4540423695364076104, guid: 38d2936a4389b3d4fbd77ce0c43c3ca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 6447179675164103921, guid: 38d2936a4389b3d4fbd77ce0c43c3ca8, type: 3}
       propertyPath: m_Name
       value: Lose Screen
@@ -6841,6 +6862,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 763657105592786702, guid: eab69f1936b388a43a765bcdfaea887a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 105123204}
+    - targetCorrespondingSourceObject: {fileID: 763657105592786702, guid: eab69f1936b388a43a765bcdfaea887a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 105123205}
   m_SourcePrefab: {fileID: 100100000, guid: eab69f1936b388a43a765bcdfaea887a, type: 3}
 --- !u!1001 &6699006208612617267
 PrefabInstance:

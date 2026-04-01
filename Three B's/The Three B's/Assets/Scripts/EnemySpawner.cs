@@ -65,6 +65,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         allWavesSpawned = true;
+        Debug.Log("All waves spawned.");
     }
 
     IEnumerator SpawnWaveRandomized(Wave wave)
@@ -111,6 +112,7 @@ public class EnemySpawner : MonoBehaviour
     public void EnemyDied()
     {
         enemiesAlive--;
+        Debug.Log("Enemies alive: " + enemiesAlive);
 
         if (allWavesSpawned && enemiesAlive <= 0)
         {
@@ -122,9 +124,9 @@ public class EnemySpawner : MonoBehaviour
     {
         Debug.Log("YOU WIN!");
 
-        if (winScreen != null)
+        if (winScreen != null){
             winScreen.SetActive(true);
-
+        }
         Time.timeScale = 0f;
     }
 
