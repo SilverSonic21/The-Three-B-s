@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5f6843b6300e604408e06f10e18ff19f
+guid: 21c3d98b5d5524c4db19d1278e1739e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1887674591896430065
-    second: jail gate_0
+      213: -5428208659569101357
+    second: full brieg _0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jail gate_0
+      name: full brieg _0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 9
-        width: 990
-        height: 328
+        x: 2
+        y: 24
+        width: 2022
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f5648d3a0e523a10800000000000000
-      internalID: 1887674591896430065
+      spriteID: 3d53fa7ebf02ba4b0800000000000000
+      internalID: -5428208659569101357
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jail gate_0: 1887674591896430065
+      full brieg _0: -5428208659569101357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

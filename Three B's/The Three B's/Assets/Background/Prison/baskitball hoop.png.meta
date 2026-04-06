@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4886d77507f34e347a4c6e2ab6382af7
+guid: d26859f1d2aaaa845af018b1ac10a017
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6203660476511742291
-    second: Sprite-jail cell_0
+      213: -7945220774756378452
+    second: baskitball hoop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-jail cell_0
+      name: baskitball hoop_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 120
+        x: 331
+        y: 36
+        width: 183
+        height: 271
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 359ec91c554d71650800000000000000
-      internalID: 6203660476511742291
+      spriteID: ca8979a0dc7ecb190800000000000000
+      internalID: -7945220774756378452
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite-jail cell_0: 6203660476511742291
+      baskitball hoop_0: -7945220774756378452
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

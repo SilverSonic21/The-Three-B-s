@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4497b9065efb87a47a621379c9d27eae
+guid: 98450e06568353d40813d60528c6f863
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -751219170933728117
-    second: background _0
+      213: 5790527528300937050
+    second: Busted (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background _0
+      name: Busted (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1021
-        height: 396
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8c1808e4222395f0800000000000000
-      internalID: -751219170933728117
+      spriteID: a5f7f728b161c5050800000000000000
+      internalID: 5790527528300937050
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background _0: -751219170933728117
+      Busted (1)_0: 5790527528300937050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

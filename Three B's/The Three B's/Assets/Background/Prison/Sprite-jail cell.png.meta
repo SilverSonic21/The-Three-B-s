@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 21c3d98b5d5524c4db19d1278e1739e5
+guid: 4886d77507f34e347a4c6e2ab6382af7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5428208659569101357
-    second: full brieg _0
+      213: 6203660476511742291
+    second: Sprite-jail cell_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: full brieg _0
+      name: Sprite-jail cell_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 24
-        width: 2022
-        height: 497
+        x: 0
+        y: 0
+        width: 320
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d53fa7ebf02ba4b0800000000000000
-      internalID: -5428208659569101357
+      spriteID: 359ec91c554d71650800000000000000
+      internalID: 6203660476511742291
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      full brieg _0: -5428208659569101357
+      Sprite-jail cell_0: 6203660476511742291
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
