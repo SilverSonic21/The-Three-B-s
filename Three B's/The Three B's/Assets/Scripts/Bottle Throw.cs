@@ -7,8 +7,11 @@ public float speed = 5f;
     public GameObject particles;
     public GameObject particles2;
     private float direction = 1f;
+    private bool hasHit = false;
     private Rigidbody2D rb;
     public float rotationSpeed = 500f;
+    public AudioSource audioSource;
+    public AudioClip breakSound;
 
     // SFX for bullet
 
@@ -39,16 +42,27 @@ public float speed = 5f;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (hasHit) return;
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            hasHit = true;
+
+           AudioSource.PlayClipAtPoint(breakSound, transform.position);
+
+        
             Destroy(collision.gameObject);
-            Instantiate(particles, transform.position, Quaternion.identity);  
-            Instantiate(particles2, transform.position, Quaternion.identity);
-            particles.GetComponent<ParticleSystem>().Play();  
-            particles2.GetComponent<ParticleSystem>().Play();
+
             
-            Destroy(gameObject);
+            GameObject p1 = Instantiate(particles, transform.position, Quaternion.identity);
+            GameObject p2 = Instantiate(particles2, transform.position, Quaternion.identity);
+
+            p1.GetComponent<ParticleSystem>().Play();
+            p2.GetComponent<ParticleSystem>().Play();
+
+        
+        Destroy(gameObject);
         } 
+        Debug.Log("Hit");
         
     }
     

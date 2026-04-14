@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 434138128854529139}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.92, y: 1.08, z: 0}
+  m_LocalPosition: {x: -0.636, y: 1.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -255,8 +255,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.59334}
-  m_Size: {x: 1, y: 3.18668}
+  m_Offset: {x: 0, y: -0.932757}
+  m_Size: {x: 1, y: 2.5078456}
   m_Direction: 0
 --- !u!114 &2814296393368343355
 MonoBehaviour:
@@ -280,10 +280,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2100791233458372398, guid: 70e3826097c421c4992c47114cda9b91, type: 3}
   firingPoint: {fileID: 7709537078160356922}
   fireRate: 0.5
-  Idle: {fileID: 7702055740140898530, guid: 7cb553c33420ed84ab3fc46fde0312da, type: 3}
-  Run: {fileID: 0}
-  Jumps: {fileID: 6375827052108896946, guid: 85f3768bb18789a4c89daf496e8be6b2, type: 3}
-  Throws: {fileID: 0}
 --- !u!114 &6255948270259033261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,7 +295,6 @@ MonoBehaviour:
   flashDuration: 0.4
   flashCount: 3
   flashColor: {r: 1, g: 0, b: 0, a: 1}
-  endgame: {fileID: 0}
 --- !u!114 &4227853983813108063
 MonoBehaviour:
   m_ObjectHideFlags: 0

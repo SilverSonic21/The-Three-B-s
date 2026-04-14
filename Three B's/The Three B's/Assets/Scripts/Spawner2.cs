@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 public class Spawner2 : MonoBehaviour
 {
-  [System.Serializable]
+[System.Serializable]
     public class SpawnableEnemy
     {
         public string name;
@@ -27,6 +27,11 @@ public class Spawner2 : MonoBehaviour
     public Transform spawnPointB;
 
     public float timeBetweenWaves = 5f;
+
+    [Header("Spawn Restrictions")]
+    public float spawnRadius = 2.5f;          // how close is "too close"
+    public LayerMask blockedLayers;           // what blocks spawning (player/enemies)
+    public int maxSpawnAttempts = 10;         // retries to find valid spot
 
     private int currentWaveIndex = 0;
 
@@ -72,8 +77,21 @@ public class Spawner2 : MonoBehaviour
 
     void SpawnEnemy(SpawnableEnemy enemyData)
     {
-        Vector3 spawnPos = GetRandomSpawnPosition();
-        Instantiate(enemyData.enemyPrefab, spawnPos, Quaternion.identity);
+        for (int i = 0; i < maxSpawnAttempts; i++)
+        {
+            Vector3 spawnPos = GetRandomSpawnPosition();
+
+            // Check if something is inside the radius
+            Collider2D hit = Physics2D.OverlapCircle(spawnPos, spawnRadius, blockedLayers);
+
+            if (hit == null)
+            {
+                Instantiate(enemyData.enemyPrefab, spawnPos, Quaternion.identity);
+                return;
+            }
+        }
+
+        Debug.Log("Failed to find valid spawn position");
     }
 
     Vector3 GetRandomSpawnPosition()
