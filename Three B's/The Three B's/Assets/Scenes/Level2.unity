@@ -207,6 +207,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4510434285405231197, guid: 38d2936a4389b3d4fbd77ce0c43c3ca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1154757591}
+    - target: {fileID: 4510434285405231197, guid: 38d2936a4389b3d4fbd77ce0c43c3ca8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 6447179675164103921, guid: 38d2936a4389b3d4fbd77ce0c43c3ca8, type: 3}
       propertyPath: m_Name
       value: Lose Screen
