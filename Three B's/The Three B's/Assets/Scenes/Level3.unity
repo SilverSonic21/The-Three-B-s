@@ -321,6 +321,10 @@ PrefabInstance:
       propertyPath: heart3
       value: 
       objectReference: {fileID: 2048525496}
+    - target: {fileID: 2814296393368343355, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
+      propertyPath: jumpForce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3075112229741204885, guid: 7b7b36ac3d419d54eadd132272fa7e04, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.83
